@@ -1,0 +1,17 @@
+{
+    "type": "postgres",
+    "host": "localhost",
+    "port": 5433,
+    "username": "postgres",
+    "password": "adminusr",
+    "database": "tasks_pubdsign_db",
+    "entities": [
+        "./src/models/*.ts"
+    ],
+    "migrations": [
+        "./src/models/migrations/*.ts"
+    ],
+    "cli": {
+        "migrationsDir": "./src/database/migrations"
+    }
+}

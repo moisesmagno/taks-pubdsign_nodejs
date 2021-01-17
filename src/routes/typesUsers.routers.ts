@@ -2,8 +2,10 @@ import { Router } from 'express';
 
 const typesUsersRouter = Router();
 
-typesUsersRouter.get('/', (request, response) => {
-    return response.json({ hello: 'Hello World!' });
+typesUsersRouter.post('/', async (request, response) => {
+    const { description } = request.body;
+
+    return response.json({ description });
 });
 
 export default typesUsersRouter;

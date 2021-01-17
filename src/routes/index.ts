@@ -1,9 +1,9 @@
 import { Router } from 'express';
 
-import typesUsersRouter from './typesUsers.routers';
+import typeUserRouter from './typeUser.routers';
 
 const routes = Router();
 
-routes.use('/types-users', typesUsersRouter);
+routes.use('/types-users', typeUserRouter);
 
 export default routes;

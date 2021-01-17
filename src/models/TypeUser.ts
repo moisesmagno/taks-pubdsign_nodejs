@@ -6,10 +6,13 @@ import {
     UpdateDateColumn,
 } from 'typeorm';
 
-@Entity()
-class TypesUsers {
+@Entity('types_users')
+class TypeUser {
     @PrimaryGeneratedColumn('uuid')
     id: string;
+
+    @Column()
+    type_user_code: number;
 
     @Column()
     description: string;
@@ -18,10 +21,10 @@ class TypesUsers {
     status: number;
 
     @CreateDateColumn()
-    crated_at: Date;
+    created_at: Date;
 
     @UpdateDateColumn()
     update_at: Date;
 }
 
-export default TypesUsers;
+export default TypeUser;

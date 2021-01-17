@@ -15,6 +15,11 @@ export default class CreateTypesUsers1610843516506 implements MigrationInterface
                         default: 'uuid_generate_v4()',
                     },
                     {
+                        name: 'type_user_code',
+                        type: 'integer',
+                        isGenerated: true,
+                    },
+                    {
                         name: 'description',
                         type: 'varchar',
                         isNullable: false,

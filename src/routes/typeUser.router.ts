@@ -2,7 +2,7 @@ import { Router } from 'express';
 import { getRepository } from 'typeorm';
 
 import TypeUser from '../models/TypeUser';
-import CreateTypeUserService from '../services/typeUsers/CreateTypeUserService';
+import CreateTypeUserService from '../services/typeUser/CreateTypeUserService';
 
 const typeUserRouter = Router();
 

@@ -1,10 +1,15 @@
 import { Router } from 'express';
 import { getRepository } from 'typeorm';
 
+import ensureAuthenticated from '../middlewares/ensureAuthenticated';
+
 import TypeUser from '../models/TypeUser';
 import CreateTypeUserService from '../services/typeUser/CreateTypeUserService';
 
 const typeUserRouter = Router();
+
+// Middlewares
+typeUserRouter.use(ensureAuthenticated);
 
 typeUserRouter.get('/', async (request, response) => {
     const typeUserRepository = getRepository(TypeUser);

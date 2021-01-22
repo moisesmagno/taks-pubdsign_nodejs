@@ -4,7 +4,7 @@ import { getRepository } from 'typeorm';
 import ensureAuthenticated from '../middlewares/ensureAuthenticated';
 
 import TypeUser from '../models/TypeUser';
-import CreateTypeUserService from '../services/typeUser/CreateTypeUserService';
+import CreateTypeUserService from '../services/typeUser/CreateTypeUserServices';
 
 const typeUserRouter = Router();
 

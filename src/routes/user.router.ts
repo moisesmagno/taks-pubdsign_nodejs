@@ -8,6 +8,8 @@ import CreateUserServices from '../services/user/CreateUserServices';
 
 const userRouter = Router();
 
+userRouter.use(ensureAuthenticated);
+
 userRouter.get('/', async (request, response) => {
     const usersRepository = getRepository(User);
     const users = await usersRepository.find();
@@ -15,7 +17,7 @@ userRouter.get('/', async (request, response) => {
     return response.json(users);
 });
 
-userRouter.post('/', ensureAuthenticated, async (request, response) => {
+userRouter.post('/', async (request, response) => {
     const {
         name,
         surname,

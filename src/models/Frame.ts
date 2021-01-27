@@ -6,16 +6,13 @@ import {
     UpdateDateColumn,
 } from 'typeorm';
 
-@Entity('customers')
-class Customer {
-    @PrimaryGeneratedColumn('uuid')
+@Entity('frames')
+class Frame {
+    @PrimaryGeneratedColumn()
     id: string;
 
     @Column()
     name: string;
-
-    @Column()
-    avatar: string;
 
     @Column()
     status: number;
@@ -27,4 +24,4 @@ class Customer {
     updated_at: Date;
 }
 
-export default Customer;
+export default Frame;

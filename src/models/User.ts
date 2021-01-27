@@ -24,6 +24,9 @@ class User {
     email: string;
 
     @Column()
+    phone_number: number;
+
+    @Column()
     password: string;
 
     @Column()

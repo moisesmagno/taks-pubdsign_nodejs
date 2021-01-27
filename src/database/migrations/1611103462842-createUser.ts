@@ -83,7 +83,7 @@ export default class createUser1611103462842 implements MigrationInterface {
     }
 
     public async down(queryRunner: QueryRunner): Promise<void> {
-        await queryRunner.dropForeignKey('user', 'type_user_id');
+        await queryRunner.dropForeignKey('user', 'TypeUserId');
         await queryRunner.dropColumn('user', 'type_user_id');
         await queryRunner.addColumn(
             'user',

@@ -45,7 +45,7 @@ class CreateUserServices {
             email,
             phone_number,
             password: hashedPassword,
-            type_user_id
+            type_user_id,
         });
 
         await userCustomRepository.save(user);
